@@ -28,8 +28,6 @@ class GFG{
 // } Driver Code Ends
 
 
-//User function Template for Java
-
 class Solution{
  boolean good(int x, int[] nums, int k) {
         long s = 0, cnt = 0;
