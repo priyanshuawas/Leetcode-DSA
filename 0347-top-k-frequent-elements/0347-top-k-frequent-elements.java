@@ -1,5 +1,6 @@
 class Solution {
-    public int[] topKFrequent(int[] nums, int k) {
+    public int[] topKFrequent(int[] nums, int k) 
+    {
         List<Integer>[] bucket = new List[nums.length+1];
         Map<Integer , Integer> frequencyMap = new HashMap<>();
         for(int i : nums){
