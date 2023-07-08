@@ -42,7 +42,7 @@ class Solution
                     j++;
                 else if(sum > 0)
                     k--;
-                else//sum=0
+                else
                     return true;
             }
         }
