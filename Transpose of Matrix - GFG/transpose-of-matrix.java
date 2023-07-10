@@ -34,19 +34,18 @@ class GFG
 }
 // } Driver Code Ends
 
-
 //User function Template for Java
 class Solution
 {
-    public void transpose(int n,int a[][])
+    public void transpose(int n,int matrix[][])
     {
-        for(int i=0;i<n;i++){
-            for(int j=i;j<n;j++){
-                int temp = a[i][j];
-                a[i][j] = a[j][i];
-                a[j][i] = temp;
+        for(int i=0; i<n; i++){
+            for(int j=i; j<n; j++){
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+                
             }
         }
-        
     }
 }
