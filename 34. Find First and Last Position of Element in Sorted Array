@@ -1,0 +1,45 @@
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        //left part will be checked to get our first ans and right for second
+        int[] result = new int[2];
+        result[0] = leftpart(nums, target);
+        result[1] = rightpart(nums, target);
+        return result;
+    }
+    static int leftpart(int[] nums, int target){
+        int start = 0;
+        int end = nums.length-1;
+        int ans = -1;
+        while(start<=end){
+            int mid  = start + (end-start)/2;
+            if(nums[mid]>=target){
+                end = mid-1;
+            }
+            else {
+                start = mid + 1;
+            }
+            if(nums[mid]==target){
+                ans = mid;
+            }            
+        }
+        return ans;
+    }
+    static int rightpart(int[] nums, int target){
+        int start = 0;
+        int end = nums.length-1;
+        int ans = -1;
+        while(start<=end){
+            int mid  = start + (end-start)/2;
+            if(nums[mid]<=target){
+                start = mid + 1;
+            }
+            else {
+                end = mid-1;
+            }
+             if(nums[mid]==target){
+                ans = mid;
+            }            
+        }
+        return ans;
+    }
+}
